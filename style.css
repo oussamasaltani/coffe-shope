@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #efefef;
+    --bg-secondary:#fbfbfb;
+    --dark-gray: #333;
+    --light-brow :#c7a17a;
+    --black:#1f2226;
+}
+
+body {
+    font-family: "open sans" , serf;
+    background-color: var(--bg-color);
+}
+
+h1,
+h2,
+h3 {
+    font-style: none;
+    color: var(--dark-gray);
+}
+
+ul {
+    list-style: none;
+    text-transform: uppercase;  
+}
+
+a {
+    text-decoration: none;
+}
+
+/* utility classes*/
+
+.container {
+    max-width: 1140px;
+    margin: auto;
+}
+
+.text-primary {
+    color: var(--light-brow);
+}
+
+ .heading {
+    text-align: center;
+}
+
+ .heading span {
+    font-size: 18px;
+}
+
+ .heading h2 {
+    font-size: 35px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/*header staet*/
+
+#header {
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    border-bottom: 1px solid#ccc;
+}
+
+#header .navbar {
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    height: 90px;
+}
+
+#header .navbar .logo {
+    width: 300px;
+}
+
+#header .navbar ul {
+    display: flex;
+}
+
+#header .navbar ul li a {
+    color: var(--dark-gray);
+    font-size: 14px;
+    margin: 0 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+#header .navbar ul li a:hover {
+        color: var(--light-brow);
+}
+
+/*header end*/
+
+/*home start*/
+
+
+#home {
+    background: url(imgs/home-bg.png) center no-repeat;
+}    
+#home {    
+    background-size: 100%;
+    background-color: var(--bg-color);
+}
+
+#home .home-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 115vh;
+    gap: 3rem;
+    align-items: center;
+}
+
+#home .home-content .content-text h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#home .home-content .content-text h1 {
+    font-size: 70px;
+    margin: 20px 0;
+    line-height: 1.3;
+}
+
+#home .home-content .content-text p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#home .home-content .content-text .btn  {
+    display: inline-block;
+    margin-top: 2rem;
+    background-color: var(--light-brow);
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+#home .home-content .content-text .btn:hover {
+    background-color: var(--dark-gray);
+}
+
+#home .home-content .content-text .btn i   {
+    margin-left: 5px;
+}
+
+#home .home-content img {
+    display: block;
+    width: 80%;
+}
+
+/*home end*/
+/*about start*/
+
+#about, #menu, #testimonials, #contact {
+    padding: 6rem 0;
+}
+
+#about {
+    background-color: var(--bg-secondary);
+}
+
+#about .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+}
+
+#about .row .about-content h2   {
+    text-transform: uppercase;
+    font-size: 28px;
+    margin-bottom: 9px;
+    margin: 1.5rem;
+}
+
+#about .row .about-content .item {
+    margin: 1.5rem;
+}
+
+#about .row .about-content .item h3 {
+    margin-bottom: 5px;
+}
+/*about end */
+
+/*menu start*/
+
+#menu {
+    background-color: var(--bg-color);
+}
+
+#menu .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2rem;
+    gap: 5rem;
+    align-items: center;
+}
+
+#menu .row .col .item {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    border: 1px solid #ddd;
+    padding: 25px 20px;
+     transition: all 0.3s ease;
+    border-radius: 30px;
+}
+
+#menu .row .col .item:hover {
+    background-color: #dcd2c9;
+}
+
+#menu .row .col .item img {
+    width: 80px;
+    margin-left: -50px;
+}
+
+#menu .row .col .details {
+    margin-left: 20px;
+}
+
+#menu .row .col .details h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+#menu .row .col .details p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+#menu .row .col .prix {
+    border-left: 1px solid #eee;
+    padding: 20px;
+    margin: auto;
+}
+
+#menu .row .col .details .prix p {
+    font-size: 20px;
+    font-weight: 600;
+}
+/*menu end */
+
+/*testimonials start */
+
+#testimonials {
+    background-color: var(--bg-secondary);
+}
+
+
+#testimonials .row {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 6rem;
+    gap: 2.5rem;
+}
+
+#testimonials .row .item {
+    background-color: var(--bg-color);
+    text-align: center;
+    padding: 25px 25px 35px;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+}
+
+#testimonials .row .item:hover {
+    background-color: #dcd2c9;
+
+}
+
+#testimonials .row .item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid#fff;
+    margin-top: -50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+#testimonials .row .item h3 {
+    margin: 20px 0 10px;
+}
+
+#testimonials .row .item p {
+    line-height: 1.6;
+}
+
+/*testimonials end */
+
+/*contact start*/
+
+#contact .row {
+    display: grid;
+    grid-template-columns: 2fr 1.4fr;
+    margin: 2rem;
+}
+
+#contact .row .contact-content {
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 30px;
+}
+
+#contact .row .contact-content h3 {
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+#contact .row .contact-content form input,
+#contact .row .contact-content form textarea {
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+}
+
+#contact .row .contact-content form .btn-submit {
+    background-color: var(--black);
+    width: 100%;
+    color: #fff;
+    padding: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+}
+
+#contact .row .contact-content form .btn-submit:hover {
+    background-color: var(--light-brow);
+}
+
+#contact .map iframe {
+    height: 100%;
+    width: 90%; 
+    
+}
+/*contact end*/
